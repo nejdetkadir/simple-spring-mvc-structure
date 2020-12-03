@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Lessons</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Teacher</th>
+        <th>Students</th>
+    </tr>
+    <tr th:each="lesson : ${lessons}">
+        <td th:text="${lesson.id}">id</td>
+        <td th:text="${lesson.name}">firstName</td>
+        <td th:text="${lesson.teacher}">lastName</td>
+        <td th:text="${lesson.getStudentList()}">schoolNumber</td>
+    </tr>
+</table>
+</body>
+</html>

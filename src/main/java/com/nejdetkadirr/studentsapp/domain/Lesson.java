@@ -13,6 +13,7 @@ public class Lesson {
 
     private String name;
     private String teacher;
+    private String studentsString = "";
 
     @ManyToMany
     @JoinTable(name = "student_book", joinColumns = @JoinColumn(name = "lesson_id"), inverseJoinColumns = @JoinColumn(name = "student_id"))
@@ -56,6 +57,13 @@ public class Lesson {
 
     public void setStudents(Set<Student> students) {
         this.students = students;
+    }
+
+    public String getStudentList() {
+        getStudents().forEach(student -> {
+            studentsString += student.getFirstName() + " " + student.getLastName()+ " - ";
+        });
+        return studentsString != null ? studentsString : "";
     }
 
     @Override
