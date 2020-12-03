@@ -15,6 +15,7 @@ public class Student {
    private String lastName;
    private int schoolNumber;
    private String department;
+   private String lessonsString = "";
 
    @ManyToMany(mappedBy = "students")
    private Set<Lesson> lessons = new HashSet<>();
@@ -75,6 +76,13 @@ public class Student {
 
     public void setLessons(Set<Lesson> lessons) {
         this.lessons = lessons;
+    }
+
+    public String getLessonsList() {
+        getLessons().forEach(lesson -> {
+            lessonsString += lesson.getName() + " , ";
+        });
+        return lessonsString != null ? lessonsString : "";
     }
 
     @Override
