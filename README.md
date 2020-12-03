@@ -1,7 +1,13 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/9790d33dd51a4f9b8fc0e66e966c6c76)](https://www.codacy.com/gh/nejdetkadir/simple-spring-mvc-structure/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nejdetkadir/simple-spring-mvc-structure&amp;utm_campaign=Badge_Grade)
 
 # simple-spring-mvc-structure
-A sample app that showcases MVC structure in Spring Boot.
+A sample app that showcases MVC structure in Spring Boot. There are students and lessons. students can join multi lessons and lessons can have multi students.
+
+# Endpoints
+| Route | HTTP Verb | Description |
+| --- | --- | --- |
+| /students | `GET` | List all students. |
+| /lessons | `GET` | List all lessons. |
 
 # LICENSE
 ```
